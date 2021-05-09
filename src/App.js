@@ -1,8 +1,8 @@
 import React from "react";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Header from "./components/Header";
-import Leaderboard from "./components/Leaderboard";
-import Profile from "./components/Profile";
+import Leaderboard from "./views/Leaderboard";
+import Profile from "./views/Profile";
 import './css/App.css';
 
 function App() {

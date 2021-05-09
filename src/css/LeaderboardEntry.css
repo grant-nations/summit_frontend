@@ -1,0 +1,10 @@
+.leaderboard-entry{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 0 0;
+}
+.entry-text{
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}

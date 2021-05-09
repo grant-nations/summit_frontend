@@ -1,0 +1,18 @@
+.profile-list-box{
+    padding: 0 30px 10px;
+}
+.plus-button{
+    background-color: transparent;
+    border: none;
+
+}
+.plus-icon{
+    color: #ff5757;
+}
+.plus-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: -10px
+}
