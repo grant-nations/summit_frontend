@@ -1,0 +1,25 @@
+.header{
+    background-color: #FFFFFF;
+    overflow: hidden;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    box-shadow: rgba(43, 43, 43, 0.1) 0 2px 4px 0;
+}
+.header-icon{
+    margin: 0 20px;
+    color: #333;
+}
+.link-active{
+  color: #5eaaa8;
+}
+
+.header-link{
+    text-decoration: none;
+}
