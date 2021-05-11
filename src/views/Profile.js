@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "../css/Profile.css";
 import ProfileEntry from "../components/ProfileEntry";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPlusCircle as plus} from "@fortawesome/free-solid-svg-icons";
+import AddClimbBox from "../components/AddClimbBox";
 
 const climbList = [
     {name: "Climb 1", attempts: 1},
@@ -13,34 +14,46 @@ const climbList = [
     {name: "Climb 6", attempts: 6},
 ]
 
-function Profile(){
+function Profile() {
+    const [listItems, setListItems] = useState([])
+    const [addItem, setAddItem] = useState(true);
 
-    function handleClick(){
+    // const [loading, setLoading] = useState(true);
 
+    function add() {
+        setAddItem(true);
     }
 
+    useEffect(() => {
+        // PERFORM AXIOS CALL HERE
+        setListItems(climbList);
+    }, [])
+
     return <div>
-        <div className={"plus-button-container"}>
-            <button
-                className={"plus-button"}
-                onClick={handleClick}
-            >
-                <FontAwesomeIcon
-                    icon={plus}
-                    size={"2x"}
-                    className={"plus-icon"}
-                />
-            </button>
-        </div>
-        <div className={"profile-list-box"}>
-            {climbList.map((climb, index) =>{
-                return <ProfileEntry
-                    key={index}
-                    name={climb.name}
-                    attempts={climb.attempts}
-                />
-            })
-            }
+        {addItem && <AddClimbBox/>}
+        <div className={addItem ? "blur-container" : ""}>
+            <div className={"plus-button-container"}>
+                <button
+                    className={"plus-button"}
+                    onClick={add}
+                >
+                    <FontAwesomeIcon
+                        icon={plus}
+                        size={"2x"}
+                        className={"plus-icon"}
+                    />
+                </button>
+            </div>
+            <div className={"profile-list-box"}>
+                {listItems.map((climb, index) => {
+                    return <ProfileEntry
+                        key={index}
+                        name={climb.name}
+                        attempts={climb.attempts}
+                    />
+                })
+                }
+            </div>
         </div>
     </div>
 }

@@ -1,0 +1,17 @@
+.login-btn {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.25rem;
+    color: #ebebeb;
+    padding: 4px;
+    border: 2px solid #050505;
+    border-radius: 5px;
+    background-color: #050505;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.login-btn:hover{
+    cursor: pointer;
+    /*color: #333333;*/
+    border-color: #ebebeb;
+    background-color: #A122DD;
+}

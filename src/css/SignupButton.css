@@ -1,0 +1,17 @@
+.signup-btn {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.25rem;
+    color: #ebebeb;
+    padding: 4px;
+    border: 2px solid #ebebeb;
+    border-radius: 5px;
+    background-color: #A122DD;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.signup-btn:hover{
+    cursor: pointer;
+    /*color: #bedbbb;*/
+    background-color: #050505;
+    border-color: #050505;
+}
